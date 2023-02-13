@@ -4,15 +4,15 @@ a = int(input("Введите число, которое хотите возве
 b = int(input("Введите степень с целым показателем: "))
 
 
-def function(a, b):
+def exponentiation(a, b):
     if b == 0:
         return 1
-    return a * function(a, b - 1)
+    return a * exponentiation(a, b - 1)
 
-if b >=0:
-    print(f"{a} в {b} степени равно: {function(a, b)}")
+if b >= 0:
+    print(f"{a} в {b} степени равно: {exponentiation(a, b)}")
 else:
-    print(f"{a} в {b} степени равно: 1/{function(a, abs(b))}. То есть: {1/function(a, abs(b))}")
+    print(f"{a} в {b} степени равно: 1/{exponentiation(a, abs(b))}. То есть: {1/exponentiation(a, abs(b))}")
 
 
 
